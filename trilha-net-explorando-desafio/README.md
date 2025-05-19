@@ -4,6 +4,17 @@ www.dio.me
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de explorando a linguagem C#, da trilha .NET da DIO.
 
+## Alterações no desafio proposto
+Neste desafio, decidi ir além. fiz com que todas as informações fossem passadas diretamente pelo usuário, sem a necessidade de estarem setadas no código.<br><br> 
+  Informar a quantidade de hóspedes;<br>
+  Cadastrar o tipo de suíte (Standard, Premium, Master);<br>
+  Cadastrar a quantidade de quartos caso os hospedes queiram quartos separados;<br>
+  Cadastrar o tipo de cama (Solteiro, Beliche, Casal Box King ou Queen Size;<br>
+  Informar a capacidade de ocupação dos quartos;<br>
+  Informar a inclusão ou não de 3 refeições, Traslado do Aeroporto e Hotel, inclusão de roteiros turísticos ou não no pacote;<br>
+  Informar o valor da diária;<br>
+  Informar a quantidade de dias reservados;<br>
+
 ## Contexto
 Você foi contratado para construir um sistema de hospedagem, que será usado para realizar uma reserva em um hotel. Você precisará usar a classe Pessoa, que representa o hóspede, a classe Suíte, e a classe Reserva, que fará um relacionamento entre ambos.
 

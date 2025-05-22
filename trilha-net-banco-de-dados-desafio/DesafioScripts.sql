@@ -11,7 +11,7 @@ SELECT
 FROM Filmes
 ----------------------------------------
 
---Buscar o nome e ano dos filmes, ordenados por ordem crescente pelo ano
+--Busca o nome e ano dos filmes, ordenados por ordem crescente pelo ano
 SELECT 
 	Nome,
 	Ano,
@@ -21,7 +21,7 @@ ORDER BY Ano ASC
 
 -----------------------------------------
 
---Busca pelo filme de volta para o futuro, trazendo o nome, ano e a duração
+--Busca pelo filme de volta para o futuro, trazendo o nome, ano e a duraï¿½ï¿½o
 SELECT
 	Nome,
 	Ano,
@@ -31,7 +31,7 @@ WHERE Nome = 'De Volta Para o Futuro'
 
 -----------------------------------------
 
---Busca pelos filmes lançados em 1997
+--Busca pelos filmes lanï¿½ados em 1997
 SELECT
 	Nome,
 	Ano,
@@ -41,7 +41,7 @@ WHERE Ano = 1997
 
 ------------------------------------------
 
---Busca os filmes lançados APÓS o ano 2000 com ordenação por ano.
+--Busca os filmes lanï¿½ados APï¿½S o ano 2000 com ordenaï¿½ï¿½o por ano.
 SELECT 
     Nome,
     Ano,
@@ -64,7 +64,7 @@ ORDER BY Duracao;
 
 ---------------------------------------------
 
---Busca a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
+--Busca a quantidade de filmes lanï¿½adas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
 SELECT
     Ano,
     COUNT(*) AS Quantidade,
@@ -75,7 +75,7 @@ ORDER BY DuracaoTotal DESC;
 
 --------------------------------------------------------
 
---Busca a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente, dizendo em um CASE quantos filmes teve no ano
+--Busca a quantidade de filmes lanï¿½adas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente, dizendo em um CASE quantos filmes teve no ano
 SELECT
     Ano,
     COUNT(*) AS Quantidade,
@@ -90,7 +90,7 @@ ORDER BY Quantidade DESC, Ano DESC;
 
 ----------------------------------------------------------------------------
 
---Busca os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
+--Busca os Atores do gï¿½nero masculino, retornando o PrimeiroNome, UltimoNome
 SELECT
     PrimeiroNome,
     UltimoNome
@@ -99,7 +99,7 @@ WHERE Genero = 'M'
 
 ----------------------------------------------------------------------------
 
---Busca as Atrizes (Gênero Feminino), retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
+--Busca as Atrizes (Gï¿½nero Feminino), retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 SELECT
     PrimeiroNome,
     UltimoNome
@@ -109,7 +109,7 @@ ORDER BY PrimeiroNome
 
 -----------------------------------------------------------------------------
 
---Busca o nome do filme e o gênero, com o Genero em Ordem Crescente
+--Busca o nome do filme e o gï¿½nero, com o Genero em Ordem Crescente
 SELECT
     f.Nome AS Filme,
     g.Genero
@@ -120,31 +120,31 @@ ORDER BY g.Genero, f.Nome;
 
 ---------------------------------------------------------------------------
 
---Busca o nome do filme e o gênero do tipo "Mistério"
+--Busca o nome do filme e o gï¿½nero do tipo "Mistï¿½rio"
 SELECT
     f.Nome AS Filme,
     g.Genero
 FROM Filmes f
 JOIN FilmesGenero fg ON f.Id = fg.IdFilme
 JOIN Generos g ON fg.IdGenero = g.Id
-WHERE g.Genero = 'Mistério'
+WHERE g.Genero = 'Mistï¿½rio'
 ORDER BY f.Nome;
 
 -----------------------------------------------------------------------------
 
---Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome, seu Papel. Adicionais: Ano, Duração(min), Gênero do Ator.
+--Busca o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome, seu Papel. Adicionais: Ano, Duraï¿½ï¿½o(min), Gï¿½nero do Ator.
 SELECT
     f.Nome AS Filme,
     a.PrimeiroNome,
     a.UltimoNome,
     e.Papel,
     f.Ano,
-    f.Duracao AS 'Duração (min)',
+    f.Duracao AS 'Duraï¿½ï¿½o (min)',
     CASE 
         WHEN a.Genero = 'M' THEN 'Masculino'
         WHEN a.Genero = 'F' THEN 'Feminino'
-        ELSE 'Não especificado'
-    END AS 'Gênero do Ator'
+        ELSE 'Nï¿½o especificado'
+    END AS 'Gï¿½nero do Ator'
 FROM ElencoFilme e
 INNER JOIN Atores a ON e.IdAtor = a.Id
 INNER JOIN Filmes f ON e.IdFilme = f.Id

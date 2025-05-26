@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10000</projectId>
+    <projectKey>GK</projectKey>
+    <exportDate>2025-05-26 04:24:00 UTC</exportDate>
+    <folders/>
+    <testCases>
+        <testCase id="239952104" key="GK-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Gustavo Koglin</createdBy>
+            <createdOn>2025-05-26 01:50:23 UTC</createdOn>
+            <customFields/>
+            <estimatedTime>120000</estimatedTime>
+            <issues>
+                <issue>
+                    <key>GK-1</key>
+                    <summary><![CDATA[Criar Autenticação Segura]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[CT01-LOGIN-VALIDO]]></name>
+            <objective><![CDATA[<span style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);display: inline !important;float: none;" id="isPasted">Verificar o fluxo de autentica&ccedil;&atilde;o com credenciais corretas</span>]]></objective>
+            <owner>712020:6cc66c2d-9456-4c80-9b7f-4d4577c4c85e</owner>
+            <precondition><![CDATA[<ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted"><ul style="list-style-type: disc;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Usu&aacute;rio de teste cadastrado (login: &quot;<a href="https://mailto:test.user@empresa.com/" style="text-decoration: none;">test.user@empresa.com</a>&quot;, senha: &quot;Test@2023&quot;)</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Servi&ccedil;o de autentica&ccedil;&atilde;o dispon&iacute;vel</p></li></ul></ul>]]></precondition>
+            <priority><![CDATA[High]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[<ol style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted"><li id="isPasted"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Acessar <a href="https://portal.empresa.com/login" style="text-decoration: none;">https://portal.empresa.com/login</a></p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Preencher campo &quot;Email&quot; com &quot;<a href="https://mailto:test.user@empresa.com/" style="text-decoration: none;">test.user@empresa.com</a>&quot;</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Preencher campo &quot;Senha&quot; com &quot;Test@2023&quot;</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Clicar no bot&atilde;o &quot;Entrar&quot;</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Aguardar at&eacute; 5 segundos</p></li></ol>]]></description>
+                        <expectedResult><![CDATA[<ol style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted"><ol style="list-style-type: decimal;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">C&oacute;digo HTTP 200 no endpoint /api/auth</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Redirecionamento para &quot;/dashboard&quot;</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Exibi&ccedil;&atilde;o do nome do usu&aacute;rio no cabe&ccedil;alho</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Gera&ccedil;&atilde;o de token JWT v&aacute;lido por 8 horas</p></li></ol></ol>]]></expectedResult>
+                        <testData><![CDATA[<pre style="margin: 0.0px !important;overflow: auto;color: rgb(73,73,73);font-size: 12.573px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: left;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;" id="isPasted">Response API:
+<span style="color: rgb(56,58,66);">{</span>
+  <span style="color: rgb(228,86,73);">&quot;status&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;success&quot;</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;token&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;[JWT_VALIDO]&quot;</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;user&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;name&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Usu&aacute;rio de Teste&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;role&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Analista QA&quot;</span>
+  <span style="color: rgb(56,58,66);">}</span>
+<span style="color: rgb(56,58,66);">}</span>
+
+<span style="color: rgb(56,58,66);">Bloqueio por tentativas excedidas:</span></pre><pre style="margin: 0.0px !important;overflow: auto;color: rgb(73,73,73);font-size: 12.573px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;" id="isPasted"><span style="color: rgb(56,58,66);">{</span>
+  <span style="color: rgb(228,86,73);">&quot;usuario_bloqueio&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;email&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;lock.user@empresa.com&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;senha_correta&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Segur@123&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;senhas_incorretas&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">[</span><span style="color: rgb(80,161,79);">&quot;Erro123&quot;</span><span style="color: rgb(56,58,66);">,</span> <span style="color: rgb(80,161,79);">&quot;Xyz@456&quot;</span><span style="color: rgb(56,58,66);">,</span> <span style="color: rgb(80,161,79);">&quot;Teste789&quot;</span><span style="color: rgb(56,58,66);">,</span> <span style="color: rgb(80,161,79);">&quot;Pass#000&quot;</span><span style="color: rgb(56,58,66);">,</span> <span style="color: rgb(80,161,79);">&quot;Fake@111&quot;</span><span style="color: rgb(56,58,66);">]</span>
+  <span style="color: rgb(56,58,66);">}</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;politicas&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;tentativas_maximas&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(183,107,1);">5</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;tempo_bloqueio_minutos&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(183,107,1);">15</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;codigo_erro&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;AUTH_TOO_MANY_ATTEMPTS&quot;</span>
+  <span style="color: rgb(56,58,66);">}</span>
+<span style="color: rgb(56,58,66);">}</span></pre><pre style="margin: 0.0px !important;overflow: auto;color: rgb(73,73,73);font-size: 12.573px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: left;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;" id="isPasted"><span style="color: rgb(56,58,66);">Sucesso ao logar, com&nbsp;a expira&ccedil;&atilde;o do token para 8h:</span></pre><pre style="margin: 0.0px !important;overflow: auto;color: rgb(73,73,73);font-size: 12.573px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;" id="isPasted"><span style="color: rgb(56,58,66);">{</span>
+  <span style="color: rgb(228,86,73);">&quot;test_case&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;CT03-Login-Com-Caracteres-Especiais&quot;</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;input_data&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;email&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;special.chars@empresa.com&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;senha&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;P@ssw&oacute;rd_&Ccedil;&oacute;m&Aacute;cc&ecirc;nts&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;senha_encoded&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;P%40ssw%C3%B3rd_%C3%87%C3%B3m%C3%81cc%C3%AAnts&quot;</span>
+  <span style="color: rgb(56,58,66);">}</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;environment&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;browser&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Chrome 118&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;locale&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;pt-BR&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;timezone&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;America/Sao_Paulo&quot;</span>
+  <span style="color: rgb(56,58,66);">}</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;expected_results&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;http_status&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(183,107,1);">200</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;database_changes&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+      <span style="color: rgb(228,86,73);">&quot;last_login&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;[CURRENT_TIMESTAMP]&quot;</span><span style="color: rgb(56,58,66);">,</span>
+      <span style="color: rgb(228,86,73);">&quot;login_count&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;increment+1&quot;</span>
+    <span style="color: rgb(56,58,66);">}</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;session_data&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+      <span style="color: rgb(228,86,73);">&quot;token_expiration&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;8h&quot;</span><span style="color: rgb(56,58,66);">,</span>
+      <span style="color: rgb(228,86,73);">&quot;permissions&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">[</span><span style="color: rgb(80,161,79);">&quot;read&quot;</span><span style="color: rgb(56,58,66);">,</span> <span style="color: rgb(80,161,79);">&quot;write&quot;</span><span style="color: rgb(56,58,66);">]</span>
+    <span style="color: rgb(56,58,66);">}</span>
+  <span style="color: rgb(56,58,66);">}</span>
+<span style="color: rgb(56,58,66);">}</span></pre>]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="239952201" key="GK-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Gustavo Koglin</createdBy>
+            <createdOn>2025-05-26 02:01:21 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>GK-1</key>
+                    <summary><![CDATA[Criar Autenticação Segura]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[CT02-CADASTRO-CAMPOS-OBRIGATORIOS]]></name>
+            <objective><![CDATA[<p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted">Validar se o sistema&nbsp;<strong>identifica corretamente campos obrigat&oacute;rios n&atilde;o preenchidos</strong> no formul&aacute;rio de cadastro.<br>Verificar se:</p><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><ul style="list-style-type: disc;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Exibe <strong>mensagens de erro espec&iacute;ficas</strong> para cada campo vazio.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Mant&eacute;m o bot&atilde;o &quot;Cadastrar&quot; <strong>desabilitado</strong> at&eacute; todos os campos serem preenchidos.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>N&atilde;o permite submiss&atilde;o</strong> do formul&aacute;rio com dados incompletos.</p></li></ul></ul>]]></objective>
+            <owner>712020:6cc66c2d-9456-4c80-9b7f-4d4577c4c85e</owner>
+            <precondition><![CDATA[<p style="margin: 0.0px 0.0px 4.0px;"><strong>Ambiente Configurado</strong>:</p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><ul><li style="color: rgb(9,30,66);"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">P&aacute;gina de cadastro acess&iacute;vel em: <code style="font-size: 0.875em;">https://portal.empresa.com/cadastro</code>.</p></li></ul></ul><ul><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;">Servi&ccedil;o de backend dispon&iacute;vel para receber requisi&ccedil;&otilde;es.<br><strong><br></strong><span style="color: rgb(9,30,66);"><strong>Estado Inicial</strong><strong>:</strong></span></p></li><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Nenhum usu&aacute;rio logado no sistema.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Formul&aacute;rio de cadastro&nbsp;<strong>limpo</strong> (todos os campos vazios).<br><br></p></li></ul><p style="margin: 0.0px 0.0px 4.0px;"><strong><span style="color: rgb(9,30,66);">Dados de Teste</span></strong><span style="color: rgb(9,30,66);">:</span></p><ul><ul><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Nome v&aacute;lido: <code style="font-size: 0.875em;">Jo&atilde;o Silva</code>.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">E-mail v&aacute;lido:&nbsp;<code style="font-size: 0.875em;">joao.silva@empresa.com</code>.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Senha v&aacute;lida:&nbsp;<code style="font-size: 0.875em;">Senha@123</code>.</p></li></ul></ul>]]></precondition>
+            <priority><![CDATA[High]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[<ol style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted"><li><p style="margin: 0.0px 0.0px 4.0px;"><strong>Acessar a p&aacute;gina de cadastro:</strong></p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Abrir o navegador e navegar at&eacute;&nbsp;<code style="font-size: 0.875em;">https://portal.empresa.com/cadastro</code>.</p></li></ul></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px 0.0px 4.0px;"><strong>Deixar todos os campos em branco e tentar cadastrar:</strong></p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>Campo &quot;Nome completo&quot;:</strong> Deixar vazio.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>Campo &quot;E-mail&quot;:</strong> Deixar vazio.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>Campo &quot;Senha&quot;:</strong> Deixar vazio.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>Campo &quot;Confirmar Senha&quot;:</strong> Deixar vazio.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Clicar no bot&atilde;o&nbsp;<strong>&quot;Cadastrar&quot;</strong>.</p></li></ul></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px 0.0px 4.0px;"><strong>Verificar mensagens de erro:</strong></p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin: 0.0px 0.0px 4.0px;">O sistema deve exibir:</p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>&quot;Nome completo &eacute; obrigat&oacute;rio&quot;</strong></p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>&quot;E-mail &eacute; obrigat&oacute;rio&quot;</strong></p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>&quot;Senha &eacute; obrigat&oacute;ria&quot;</strong></p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;"><strong>&quot;Confirme sua senha&quot;</strong></p></li></ul></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">O bot&atilde;o&nbsp;<strong>&quot;Cadastrar&quot;</strong> deve permanecer desabilitado at&eacute; que todos os campos obrigat&oacute;rios sejam preenchidos.</p></li></ul></li><li style="margin-top: 4.0px;" id="isPasted"><p style="margin: 0.0px 0.0px 4.0px;"><strong>Preencher apenas o nome completo e tentar novamente:</strong></p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Inserir um nome v&aacute;lido (ex: <code style="font-size: 0.875em;">Jo&atilde;o Silva</code>).</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Manter os demais campos (<strong>E-mail</strong>, <strong>Senha</strong>, <strong>Confirmar Senha</strong>) vazios.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Clicar em <strong>&quot;Cadastrar&quot;</strong>.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">O sistema deve exibir mensagens de erro <strong>apenas</strong> nos campos n&atilde;o preenchidos (E-mail, Senha, Confirmar Senha).</p></li></ul></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px 0.0px 4.0px;"><strong>Preencher apenas e-mail e tentar novamente:</strong></p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Deixar&nbsp;<strong>Nome completo</strong> e&nbsp;<strong>Senha</strong> em branco.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Inserir um e-mail v&aacute;lido (ex:&nbsp;<code style="font-size: 0.875em;">joao.silva@empresa.com</code>).</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Clicar em&nbsp;<strong>&quot;Cadastrar&quot;</strong>.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">O sistema deve exibir mensagens de erro&nbsp;<strong>apenas</strong> nos campos n&atilde;o preenchidos (Nome completo, Senha, Confirmar Senha).</p></li></ul></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px 0.0px 4.0px;"><strong>Preencher senha sem confirmar e tentar novamente:</strong></p><ul style="margin-top: 4.0px;margin-bottom: 0.0px;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Preencher&nbsp;<strong>Senha</strong> (ex:&nbsp;<code style="font-size: 0.875em;">Senha@123</code>), mas deixar&nbsp;<strong>Confirmar Senha</strong> vazio.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Clicar em&nbsp;<strong>&quot;Cadastrar&quot;</strong>.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">O sistema deve exibir:&nbsp;<strong>&quot;Confirme sua senha&quot;</strong>.</p></li></ul></li></ol>]]></description>
+                        <expectedResult><![CDATA[<p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted"><strong>Caso 1 (Todos os campos vazios):</strong></p><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Mensagens de erro em todos os campos obrigat&oacute;rios.</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Bot&atilde;o &quot;Cadastrar&quot; desabilitado.</p></li></ul><p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><strong>Caso 2 (Apenas nome preenchido):</strong></p><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Mensagens de erro <strong>apenas</strong> em E-mail, Senha e Confirmar Senha.</p></li></ul><p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><strong>Caso 3 (Apenas e-mail preenchido):</strong></p><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Mensagens de erro <strong>apenas</strong> em Nome completo, Senha e Confirmar Senha.</p></li></ul><p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><strong>Caso 4 (Senha preenchida, mas n&atilde;o confirmada):</strong></p><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Mensagem de erro <strong>apenas</strong> em &quot;Confirmar Senha&quot;.</p></li></ul><p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><strong>Caso de Falha (Se aplic&aacute;vel):</strong></p><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Se o sistema permitir cadastro sem validar os campos obrigat&oacute;rios, registrar um <strong>bug cr&iacute;tico</strong>.</p></li></ul>]]></expectedResult>
+                        <testData><![CDATA[<pre style="margin: 0.0px !important;overflow: auto;color: rgb(73,73,73);font-size: 12.573px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;" id="isPasted"><span style="color: rgb(56,58,66);">{</span>
+  <span style="color: rgb(228,86,73);">&quot;test_case&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;CT02-CADASTRO-CAMPOS-OBRIGATORIOS&quot;</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;valid_data&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;nome&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Jo&atilde;o Silva&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;email&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;joao.silva@empresa.com&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);" id="isPasted">&quot;confirmar_email&quot;<span style="color: rgb(64,120,242);" id="isPasted">:</span> <span style="color: rgb(80,161,79);">&quot;joao.silva@empresa.com&quot;</span><span style="color: rgb(56,58,66);">,</span></span>
+    <span style="color: rgb(228,86,73);">&quot;senha&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Senha@123&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;confirmar_senha&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Senha@123&quot;</span>
+  <span style="color: rgb(56,58,66);">}</span><span style="color: rgb(56,58,66);">,</span>
+  <span style="color: rgb(228,86,73);">&quot;expected_errors&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(56,58,66);">{</span>
+    <span style="color: rgb(228,86,73);">&quot;nome_vazio&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Nome completo &eacute; obrigat&oacute;rio&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;email_vazio&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;E-mail &eacute; obrigat&oacute;rio&quot;</span><span style="color: rgb(56,58,66);">,</span>
+    <span style="color: rgb(228,86,73);">&quot;senha_vazia&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Senha &eacute; obrigat&oacute;ria&quot;</span><span style="color: rgb(56,58,66);">,</span>
+<span style="color: rgb(56,58,66);">&nbsp;   <span style="color: rgb(228,86,73);" id="isPasted">&quot;confirmar_email_vazio&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;A confirma&ccedil;&atilde;o de e-mail &eacute; obrigat&oacute;ria&quot;</span><span style="color: rgb(56,58,66);">,</span></span>
+    <span style="color: rgb(228,86,73);">&quot;confirmar_senha_vazia&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;A confirma&ccedil;&atilde;o de senha &eacute; obrigat&oacute;ria&quot;,</span>
+<span style="color: rgb(80,161,79);">&nbsp;   <span style="color: rgb(228,86,73);" id="isPasted">&quot;senha_corresponde&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;As senhas devem ser iguais&quot;,</span></span>
+<span style="color: rgb(80,161,79);"><span style="color: rgb(80,161,79);">    <span style="color: rgb(228,86,73);" id="isPasted">&quot;email_corresponde&quot;</span><span style="color: rgb(64,120,242);">:</span> <span style="color: rgb(80,161,79);">&quot;Os emails devem ser iguais&quot;,</span></span></span>
+  <span style="color: rgb(56,58,66);">}</span>
+<span style="color: rgb(56,58,66);">}</span></pre>]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="239955195" key="GK-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Gustavo Koglin</createdBy>
+            <createdOn>2025-05-26 03:42:07 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[CT02-BDD-CADASTRO-CAMPOS-OBRIGATORIOS]]></name>
+            <objective><![CDATA[&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<ol style="margin-left: 20.0px;"><li><p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted">Verificar se a API autentica corretamente usu&aacute;rios com credenciais v&aacute;lidas.</p></li><li><p style="font-size: 16.002px;color: rgb(64,64,64);font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted">Validar se o sistema retorna:</p></li></ol><ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);"><ul style="list-style-type: disc;"><ul style="list-style-type: disc;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Status HTTP 200</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">Um token JWT v&aacute;lido</p></li></ul></ul></ul>]]></objective>
+            <owner>712020:6cc66c2d-9456-4c80-9b7f-4d4577c4c85e</owner>
+            <precondition><![CDATA[<ul style="color: rgb(64,64,64);font-size: 16.002px;font-style: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;white-space: normal;background-color: rgb(255,255,255);" id="isPasted"><ul style="list-style-type: disc;"><li><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">O endpoint <code style="font-size: 0.875em;">/login</code> est&aacute; dispon&iacute;vel e acess&iacute;vel</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">O usu&aacute;rio de teste&nbsp;<code style="font-size: 0.875em;">testUser</code> existe no banco de dados</p></li><li style="margin-top: 4.0px;"><p style="margin-top: 0.0px;margin-right: 0.0px;margin-bottom: 0.0px !important;margin-left: 0.0px;">A senha&nbsp;<code style="font-size: 0.875em;">testPass</code> est&aacute; correta para este usu&aacute;rio</p></li></ul></ul>]]></precondition>
+            <priority><![CDATA[High]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[# language: en
+#Feature: User Authentication API
+#  As a system
+#  I need to validate credentials via API
+#  To ensure secure access to resources
+
+  #1: Login válido (Valid login scenario)
+  #Scenario: Successful login with correct credentials
+    Given the API endpoint "/login" is available
+    And the user provides valid credentials:
+      | username | password |
+      | testUser | testPass |
+    When the login API is called with a POST request
+    Then the response status code should be 200
+    And the response body should contain a JWT token
+
+  #2: Credencial inválida (Invalid credential scenario)  
+  #Scenario: Login attempt with wrong password
+    Given the API endpoint "/login" is available
+    And the user provides invalid credentials:
+      | username | password  |
+      | testUser | wrongPass |
+    When the login API is called with a POST request
+    Then the response status code should be 401
+    And the response should contain "Invalid credentials"
+
+  #3: Campo obrigatório faltando (Missing required field scenario)
+  #Scenario: Login attempt without password
+    Given the API endpoint "/login" is available
+    And the user provides incomplete credentials:
+      | username | password |
+      | testUser |          |
+    When the login API is called with a POST request
+    Then the response status code should be 400
+    And the response should contain "Password is required"]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="239955907" key="GK-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Gustavo Koglin</createdBy>
+            <createdOn>2025-05-26 04:09:28 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[CT01-BDD-LOGIN-VALIDO]]></name>
+            <objective><![CDATA[<span style="color: rgb(9,30,66);">Verificar o fluxo de autentica&ccedil;&atilde;o com credenciais corretas<br></span>]]></objective>
+            <owner>712020:6cc66c2d-9456-4c80-9b7f-4d4577c4c85e</owner>
+            <precondition><![CDATA[<ol><li>Usu&aacute;rio de teste cadastrado (login: &quot;test.user@empresa.com&quot;, senha: &quot;Test@2023&quot;),</li><li>Servi&ccedil;o de autentica&ccedil;&atilde;o dispon&iacute;vel.</li></ol><br>]]></precondition>
+            <priority><![CDATA[High]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>

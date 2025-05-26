@@ -120,14 +120,14 @@ ORDER BY g.Genero, f.Nome;
 
 ---------------------------------------------------------------------------
 
---Busca o nome do filme e o g�nero do tipo "Mist�rio"
+--Busca o nome do filme e o g�nero do tipo "Mistério"
 SELECT
     f.Nome AS Filme,
     g.Genero
 FROM Filmes f
 JOIN FilmesGenero fg ON f.Id = fg.IdFilme
 JOIN Generos g ON fg.IdGenero = g.Id
-WHERE g.Genero = 'Mist�rio'
+WHERE g.Genero = 'Mistério'
 ORDER BY f.Nome;
 
 -----------------------------------------------------------------------------

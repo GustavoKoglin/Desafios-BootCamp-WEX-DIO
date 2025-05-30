@@ -1,7 +1,7 @@
 # Relatório de Implementação de Serviços AWS para Redução de Custos  
-**Data:** [30/05/2025]  
+**Data:** 30/05/2025  
 **Empresa:** Abstergo Industries  
-**Responsável:** [Gustavo Borges Koglin]  
+**Responsável:** Gustavo Borges Koglin
 
 ---
 
@@ -71,4 +71,4 @@ A implementação desses serviços AWS na [Nome da Empresa Farmacêutica] result
 - Adoção de **AWS Lambda** em mais processos automatizáveis.  
 
 **Assinatura do Responsável:**  
-[Gustavo Borges Koglin]  
+   *Gustavo Borges Koglin*
